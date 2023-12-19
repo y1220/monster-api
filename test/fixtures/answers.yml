@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  field_id: 1
+  field_type: MyString
+  value_text: MyString
+  value_int: 1
+  question_id: 1
+  player_id: 1
+
+two:
+  field_id: 1
+  field_type: MyString
+  value_text: MyString
+  value_int: 1
+  question_id: 1
+  player_id: 1

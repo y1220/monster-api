@@ -24,6 +24,26 @@ class PlayersController < ApplicationController
     end
   end
 
+  def login
+    @player = Player.find_by(email: login_params[:email])
+
+    if @player.password == login_params[:password]
+      render json: @player
+    else
+      render json: @player.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update_role
+    @player = Player.find(role_params[:id])
+    @player.role = role_params[:role]
+    if @player.save
+      render json: @player
+    else
+      render json: @player.errors, status: :unprocessable_entity
+    end
+  end
+
   # PATCH/PUT /players/1
   def update
     if @player.update(player_params)
@@ -47,5 +67,13 @@ class PlayersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def player_params
       params.require(:player).permit(:username, :email, :password, :role)
+    end
+
+    def login_params
+      params.require(:player).permit(:email, :password)
+    end
+
+    def role_params
+      params.require(:player).permit(:id, :role)
     end
 end
