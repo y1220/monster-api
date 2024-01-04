@@ -1,24 +1,14 @@
-# README
+# Rails API for mental health unity game 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API is for managing data for gaming activity
 
-Things you may want to cover:
+# Functionalities 
 
-* Ruby version
+* Signin
 
-* System dependencies
+* Login
 
-* Configuration
+* Question form creation/retrieval 
 
-* Database creation
+* Answer creation/retrieval 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
